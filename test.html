@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Study PACT-TEST</title>
     <style>
       /* *******************  HEADER CSS START  ******************* */
       body {
@@ -131,32 +131,54 @@
         margin: auto;
       }
       /* *******************  FOOTER CSS END  ******************* */
+
+      .test-paper {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .subject-container {
+        flex: 0 0 300px;
+        border: 2px solid black;
+      }
+      .subject-values {
+        flex: 2 2 600px;
+        border: 2px solid black;
+      }
     </style>
   </head>
   <body>
     <!-- *******************  HEADER START  ******************* -->
-
-    <h1 id="heading">Study PACT</h1>
-    <hr />
-    <br />
-    <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about_us.html">About</a>
-      <div class="resources">
-        <button class="resourcebtn">Resources</button>
-        <div class="dropdown-content">
-          <a href="prepare.html">Prepare</a>
-          <a href="attend.html">Attend</a>
-          <a href="test.html">Test</a>
+    <header>
+      <h1 id="heading">Study PACT</h1>
+      <hr />
+      <br />
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <div class="resources">
+          <button class="resourcebtn">Resources</button>
+          <div class="dropdown-content">
+            <a href="prepare.html">Prepare</a>
+            <a href="attend.html">Attend</a>
+            <a href="test.html">Test</a>
+          </div>
         </div>
+        <a href="index.html #contacts">Contact</a>
+        <input type="text" placeholder="Search.." />
       </div>
-      <a href="index.html #contacts">Contact</a>
-      <input type="text" placeholder="Search.." />
-    </div>
-
+    </header>
     <!-- *******************  HEADER END  ******************* -->
 
-    <h1>WELCOME ! Test your Knowledge by solving the tests.</h1>
+    <div class="test-paper">
+      <div class="subject-container">
+        <ul>
+          <li class="subjects"><a href="#" id="ssc">10 th (SSC)</a></li>
+          <li class="subjects"><a href="#" id="hsc">12 th (HSC)</a></li>
+          <li class="subjects"><a href="#" id="engineer">Engineering</a></li>
+        </ul>
+      </div>
+      <div class="subject-values">wow</div>
+    </div>
 
     <!-- *******************  FOOTER START  ******************* -->
     <br /><br />
@@ -179,4 +201,13 @@
 
     <!-- *******************  FOOTER END  ******************* -->
   </body>
+  <script defer>
+    function display() {
+      subValues.innerHTML = "HELLO";
+    }
+    subValues = document.querySelector(".subject-values");
+    sscPaper = document.querySelector("#ssc");
+    hscPaper = document.querySelector("#hsc");
+    sscPaper.addEventListener("mouseover", display);
+  </script>
 </html>
