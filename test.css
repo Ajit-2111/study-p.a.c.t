@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Study PACT-Attend</title>
-    <style>
       /* *******************  HEADER CSS START  ******************* */
       body {
         max-width: 1000px;
@@ -130,53 +122,54 @@
       #rights {
         margin: auto;
       }
+
       /* *******************  FOOTER CSS END  ******************* */
-    </style>
-  </head>
-  <body>
-    <!-- *******************  HEADER START  ******************* -->
 
-    <h1 id="heading">Study PACT</h1>
-    <hr />
-    <br />
-    <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about_us.html">About</a>
-      <div class="resources">
-        <button class="resourcebtn">Resources</button>
-        <div class="dropdown-content">
-          <a href="prepare.html">Prepare</a>
-          <a href="attend.html">Attend</a>
-          <a href="test.html">Test</a>
-        </div>
-      </div>
-      <a href="contact.html">Contact</a>
-      <input type="text" placeholder="Search.." />
-    </div>
+      .test-paper {
+        margin: 15px 25px;
+        display: flex;
+        background-color: rgb(236, 216, 217);
+      }
+      .subject-container {
+        flex: 2 2 300px;
+        border: 2px solid black;
+      }
+      .subject-values {
+        flex: 2 2 600px;
+        border: 2px solid black;
+      }
+      .subject-container a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: left;
+        padding: 14px 0px 14px 5px;
+        text-decoration: none;
+        font-size: 17px;
+        width: 100%;
+      }
+      .subject-container a:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
 
-    <!-- *******************  HEADER END  ******************* -->
 
-    <h1>Welcome ! Attend your lectures here.</h1>
+      /* *******************  PILL BUTTON CSS START  ******************* */
+      .sub-pill-button {
+        background-color: #ddd;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+      }
 
-    <!-- *******************  FOOTER START  ******************* -->
-    <br /><br />
-    <footer>
-      <!-- <img src="#" alt="logo" id="footer-logo"> -->
-      <h1 id="footer-logo">Study PACT</h1>
-      <div id="footer-about">
-        <h2>About us</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam in
-          amet et facilis accusamus. Officia voluptas impedit, repudiandae
-          maxime eius consequatur sunt aut, nulla modi incidunt autem quasi
-          tempore rem.
-        </p>
-      </div>
-      <div id="rights">
-        <p>Copyright @ 2020 Study PACT All Right Reserved</p>
-      </div>
-    </footer>
+      .sub-pill-button:hover {
+        background-color: #f1f1f1;
+      }
 
-    <!-- *******************  FOOTER END  ******************* -->
-  </body>
-</html>
+      /* *******************  PILL BUTTON CSS END  ******************* */
