@@ -160,11 +160,7 @@
         background-color: rgb(255, 255, 255);
         color: black;
       }
-      #ssc-subval,
-      #hsc-subval,
-      #engineer-subval {
-        display: none;
-      }
+
 
       /* *******************  PILL BUTTON CSS START  ******************* */
       .sub-pill-button {
@@ -217,27 +213,10 @@
         <a href="#" id="engineer">Engineering</a>
       </div>
       <div class="subject-values">
-        <div class="is-disp-block" id="ssc-subval">
-          <button class="sub-pill-button">2020</button
-          ><button class="sub-pill-button">2019</button
-          ><button class="sub-pill-button">2018</button
-          ><button class="sub-pill-button">2017</button
-          ><button class="sub-pill-button">2016</button>
-        </div>
-        <div class="is-disp-block" id="hsc-subval">
-          <button class="sub-pill-button">2020</button
-          ><button class="sub-pill-button">2019</button
-          ><button class="sub-pill-button">2018</button
-          ><button class="sub-pill-button">2017</button
-          ><button class="sub-pill-button">2016</button>
-        </div>
-        <div class="is-disp-block" id="engineer-subval">
-          <button class="sub-pill-button">Mechanical</button
-          ><button class="sub-pill-button">Information Technology</button
-          ><button class="sub-pill-button">Computer Science</button
-          ><button class="sub-pill-button">Chemical</button
-          ><button class="sub-pill-button">Electrical</button>
-        </div>
+        <span id="disp"></span>
+        
+        
+        
       </div>
     </div>
     <span id="result"
@@ -272,20 +251,39 @@
   </body>
   <script defer>
     subValues = document.querySelector(".subject-values");
+    disp = document.querySelector("#disp")
     sscPaper = document.querySelector("#ssc");
     hscPaper = document.querySelector("#hsc");
     engineerPaper = document.querySelector("#engineer");
     sscPaper.addEventListener("mouseover", function () {
-      document.querySelector(".is-disp-block").style.display = "none";
-      document.querySelector("#ssc-subval").style.display = "block";
+      subValues.innerHTML = ""
+      subValues.innerHTML = `<div class="is-disp-block" id="ssc-subval">
+          <button class="sub-pill-button">2020</button
+          ><button class="sub-pill-button">2019</button
+          ><button class="sub-pill-button">2018</button
+          ><button class="sub-pill-button">2017</button
+          ><button class="sub-pill-button">2016</button>
+        </div>`
     });
     hscPaper.addEventListener("mouseover", function () {
-      document.querySelector(".is-disp-block").style.display = "none";
-      document.querySelector("#hsc-subval").style.display = "block";
+      subValues.innerHTML = ""
+      subValues.innerHTML = `<div class="is-disp-block" id="hsc-subval">
+          <button class="sub-pill-button">2020</button
+          ><button class="sub-pill-button">2019</button
+          ><button class="sub-pill-button">2018</button
+          ><button class="sub-pill-button">2017</button
+          ><button class="sub-pill-button">2016</button>
+        </div>`
     });
-    engineerPaper.addEventListener("mouseover", function () {
-      document.querySelector(".is-disp-block").style.display = "none";
-      document.querySelector("#engineer-subval").style.display = "block";
-    });
+    engineerPaper.addEventListener("mouseover", function(){
+      subValues.innerHTML = ""
+      subValues.innerHTML = `<div class="is-disp-block" id="engineer-subval">
+          <button class="sub-pill-button">Mechanical</button
+          ><button class="sub-pill-button">Information Technology</button
+          ><button class="sub-pill-button">Computer Science</button
+          ><button class="sub-pill-button">Chemical</button
+          ><button class="sub-pill-button">Electrical</button>
+        </div>`
+    })
   </script>
 </html>
