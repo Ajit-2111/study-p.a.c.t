@@ -130,20 +130,61 @@
       #rights {
         margin: auto;
       }
+
       /* *******************  FOOTER CSS END  ******************* */
 
       .test-paper {
+        margin: 15px 25px;
         display: flex;
-        flex-flow: row wrap;
+        background-color: rgb(236, 216, 217);
       }
       .subject-container {
-        flex: 0 0 300px;
+        flex: 2 2 300px;
         border: 2px solid black;
       }
       .subject-values {
         flex: 2 2 600px;
         border: 2px solid black;
       }
+      .subject-container a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: left;
+        padding: 14px 0px 14px 5px;
+        text-decoration: none;
+        font-size: 17px;
+        width: 100%;
+      }
+      .subject-container a:hover {
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
+      #ssc-subval,
+      #hsc-subval,
+      #engineer-subval {
+        display: none;
+      }
+
+      /* *******************  PILL BUTTON CSS START  ******************* */
+      .sub-pill-button {
+        background-color: #ddd;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+      }
+
+      .sub-pill-button:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* *******************  PILL BUTTON CSS END  ******************* */
     </style>
   </head>
   <body>
@@ -171,15 +212,43 @@
 
     <div class="test-paper">
       <div class="subject-container">
-        <ul>
-          <li class="subjects"><a href="#" id="ssc">10 th (SSC)</a></li>
-          <li class="subjects"><a href="#" id="hsc">12 th (HSC)</a></li>
-          <li class="subjects"><a href="#" id="engineer">Engineering</a></li>
-        </ul>
+        <a href="#" id="ssc">10 th (SSC)</a>
+        <a href="#" id="hsc">12 th (HSC)</a>
+        <a href="#" id="engineer">Engineering</a>
       </div>
-      <div class="subject-values">wow</div>
+      <div class="subject-values">
+        <div class="is-disp-block" id="ssc-subval">
+          <button class="sub-pill-button">2020</button
+          ><button class="sub-pill-button">2019</button
+          ><button class="sub-pill-button">2018</button
+          ><button class="sub-pill-button">2017</button
+          ><button class="sub-pill-button">2016</button>
+        </div>
+        <div class="is-disp-block" id="hsc-subval">
+          <button class="sub-pill-button">2020</button
+          ><button class="sub-pill-button">2019</button
+          ><button class="sub-pill-button">2018</button
+          ><button class="sub-pill-button">2017</button
+          ><button class="sub-pill-button">2016</button>
+        </div>
+        <div class="is-disp-block" id="engineer-subval">
+          <button class="sub-pill-button">Mechanical</button
+          ><button class="sub-pill-button">Information Technology</button
+          ><button class="sub-pill-button">Computer Science</button
+          ><button class="sub-pill-button">Chemical</button
+          ><button class="sub-pill-button">Electrical</button>
+        </div>
+      </div>
     </div>
-
+    <span id="result"
+      ><iframe
+        src="http://infolab.stanford.edu/pub/papers/google.pdf#toolbar=0&navpanes=0&scrollbar=0"
+        frameborder="0"
+        scrolling="auto"
+        height="100%"
+        width="100%"
+      ></iframe
+    ></span>
     <!-- *******************  FOOTER START  ******************* -->
     <br /><br />
     <footer>
@@ -202,12 +271,21 @@
     <!-- *******************  FOOTER END  ******************* -->
   </body>
   <script defer>
-    function display() {
-      subValues.innerHTML = "HELLO";
-    }
     subValues = document.querySelector(".subject-values");
     sscPaper = document.querySelector("#ssc");
     hscPaper = document.querySelector("#hsc");
-    sscPaper.addEventListener("mouseover", display);
+    engineerPaper = document.querySelector("#engineer");
+    sscPaper.addEventListener("mouseover", function () {
+      document.querySelector(".is-disp-block").style.display = "none";
+      document.querySelector("#ssc-subval").style.display = "block";
+    });
+    hscPaper.addEventListener("mouseover", function () {
+      document.querySelector(".is-disp-block").style.display = "none";
+      document.querySelector("#hsc-subval").style.display = "block";
+    });
+    engineerPaper.addEventListener("mouseover", function () {
+      document.querySelector(".is-disp-block").style.display = "none";
+      document.querySelector("#engineer-subval").style.display = "block";
+    });
   </script>
 </html>
