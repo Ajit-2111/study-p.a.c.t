@@ -99,35 +99,35 @@ function ssc2019() {
       <th>Download</th>
     </tr>
     <tr>
-      <td>2019</td>
+      <td>2020</td>
       <td>December</td>
       <td>Mathematics</td>
       <td>Preview</td>
       <td>Download</td>
     </tr>
     <tr>
-      <td>2019</td>
+      <td>2020</td>
       <td>December</td>
       <td>Science</td>
       <td>Preview</td>
       <td>Download</td>
     </tr>
     <tr>
-      <td>2019</td>
+      <td>2020</td>
       <td>December</td>
       <td>History</td>
       <td>Preview</td>
       <td>Download</td>
     </tr>
     <tr>
-      <td>2019</td>
+      <td>2020</td>
       <td>December</td>
       <td>Geography</td>
       <td>Preview</td>
       <td>Download</td>
     </tr>
     <tr>
-      <td>2019</td>
+      <td>2020</td>
       <td>December</td>
       <td>English</td>
       <td>Preview</td>
