@@ -127,15 +127,15 @@ footer {
 .test-paper {
   margin: 15px 25px;
   display: flex;
-  background-color: rgb(236, 216, 217);
+  background-color: rgb(59, 71, 175);
+  border-radius: 5px;
 }
 .subject-container {
   flex: 2 2 300px;
-  border: 2px solid black;
 }
 .subject-values {
   flex: 2 2 600px;
-  border: 2px solid black;
+  padding: 5px;
 }
 .subject-container a {
   float: left;
