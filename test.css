@@ -127,8 +127,9 @@ footer {
 .test-paper {
   margin: 15px 25px;
   display: flex;
-  background-color: rgb(59, 71, 175);
   border-radius: 5px;
+  padding: 15px 20px;
+  background-color: #2196f3;
 }
 .subject-container {
   flex: 2 2 300px;
@@ -185,6 +186,10 @@ th,
 td {
   text-align: left;
   padding: 8px;
+}
+td a {
+  text-decoration: none;
+  color: #1a46c0;
 }
 
 tr:nth-child(even) {
